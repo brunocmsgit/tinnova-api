@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "fb642123-5209-4060-a5cd-d7f2a8b675e6",
+		"name": "TinnovaAPI - Veiculos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29482933"
+	},
+	"item": [
+		{
+			"name": "Listar Todos os Veículos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/veiculos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"veiculos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Veículos Vendidos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/veiculos/vendidos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"veiculos",
+						"vendidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Veículos Não Vendidos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/veiculos/nao-vendidos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"veiculos",
+						"nao-vendidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Veículo pelo ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/veiculos/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"veiculos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Veículos Por Decada",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/veiculos/decada",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"veiculos",
+						"decada"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Veículos Por Marca",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/veiculos/marca",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"veiculos",
+						"marca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Veículos Cadastrados Ultima Semana",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/veiculos/ultima-semana",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"veiculos",
+						"ultima-semana"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Veículos Por Marca e Ano",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/veiculos/marca-ano?marca=Fiat&ano=2005",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"veiculos",
+						"marca-ano"
+					],
+					"query": [
+						{
+							"key": "marca",
+							"value": "Fiat"
+						},
+						{
+							"key": "ano",
+							"value": "2005"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Veículo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"veiculo\": \"Uno mille\",\r\n    \"marca\": \"Fiat\",\r\n    \"ano\": 2005,\r\n    \"descricao\": \"1.0 Gasolina\",\r\n    \"vendido\" : true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/veiculos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"veiculos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar Veículo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"veiculo\": \"S10 Cabine Dupla\",\r\n    \"marca\": \"Chevrolet\",\r\n    \"ano\": 2021,\r\n    \"descricao\": \"2.4 Diesel\",\r\n    \"vendido\" : true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/veiculos/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"veiculos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar Veículo Patch",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"vendido\" : true,\r\n    \"ano\": 2023\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/veiculos/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"veiculos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remover Veículo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/veiculos/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"veiculos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
